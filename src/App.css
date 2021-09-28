@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {box-sizing: border-box;}
+:root {
+    --black:#000000;
+    --gray-d:#050e13;
+    --blue: #11162efa;
+    --blue-2: rgba(7, 28, 73, 0.8);
+    --white: #ffffff; 
+    --blue-g06: #7e8ab3;
+    --blue-g7: #545f85;
+    --blue-d1: #050f1f;
+    --blue-d2: #050d13;
+    --teal-d3: #021111;
+    --gray: #9c9a9a;
+    --gray-c2:#202324;
+    --gray-d8:#796d6d2d;
+    --color-bg:  #101426b2;
+    --color-1: rgba(0,0,0,0.4);
+    --color-19: rgba(2, 7, 36, 0.966);
+    --color-2: rgba(1, 12, 15, 0.4);
+    --font-roboto:'Roboto', sans-serif;
+    --font-lora:'Lora', sans-serif;
+    --font-openSans:'Open Sans', sans-serif;
 }
+html, body {margin: 0;font-family: var(--font-lora);font-size: 16px;}
+a {text-decoration: none;}
+ul, li {margin: 0;padding: 0;list-style-type: none;}
+h1, h2 ,h3 ,h4 ,h5 , p{margin: 0;}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.bg-teal {background-color:var(--teal);}
+.bg-black {background-color:var(--black);}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.site-header {
+  background-color:var(--color-bg);
+  position: fixed;
+  display: block;
+  width: 100%;
+  z-index:100;
+  padding: 20px 0;
 }
-
-.App-link {
-  color: #61dafb;
+.container {
+  max-width:1200px;
+  margin: 0 auto;
+  padding:0 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.site-header .container {display:flex;justify-content: space-between; align-items: center;}
+.logo > a{
+    color: var(--white);
+    font-family: var(--font-lora);
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 52px;
+    cursor: pointer;
 }
+.logo > a:hover{color: var(--gray);}
+.top-nav a {
+    color: var(--white);
+    background-color: var(--blue-g06);
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 27px;
+    display: inline-block;
+    position: relative;
+    padding: 8px 30px;
+    border-radius: 3px;
+    border:1px solid var(--blue-g06);
+}
+.top-nav a:hover, .top-nav a:active {color:var(--gray);background-color: var(--blue-g7);border:1px solid var(--gray);}
+.icon-x, .sidenav .icon-x{
+    font-size: 0.7rem;
+    margin: 8px 25px 0 9px;
+    position: absolute;
+}
+/*Header menu button*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100; 
+    top: 0; 
+    right: 0;
+    background-color: var(--blue);
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    font-family: var(--font-roboto);
+    font-size: 2rem;
+    color: var(--white);
+    display: block;
+    transition: 0.3s;
+    position: relative;
+    line-height: 27px;
+}
+.sidenav a:hover {color: var(--gray);}
+.sidenav .closebtn{
+    position: absolute;
+    top: 10px;
+    font-size: 36px;
+    margin-left: 5px;
+}
+.icon-sidenav{
+    font-size: 0.7rem;
+    margin: 10px 25px 0 9px;
+    position: absolute;
+}
+.menu-button a{
+    color: var(--white);
+    font-size: 2rem;
+    margin-right: 10px;
+}
+.menu-button a:hover{color: var(--gray);}
