@@ -1,16 +1,13 @@
 import './App.css';
 import Logo from './Logo';
+import TopNav from './TopNav';
 
 function Header() {
   return (
     <header class="site-header" id="dark-header">
         <div class="container flex-container">
             <Logo />
-            <nav class="top-nav">
-                <ul class="flex-container">
-                    <li><a href="#contacts-map">Contacts</a></li>
-                </ul>
-            </nav>
+            <TopNav />
             <div id="menu" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="#contacts-map">Contacts</a>
